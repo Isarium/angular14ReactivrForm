@@ -1,0 +1,27 @@
+<form [formGroup]="userForm" (ngSubmit)="addUser()">
+    <label>Name :
+        <input type="text" formControlName="name">
+    </label>
+    
+      <label>Email :
+          <input type="text" formControlName="email">
+    </label>
+    
+    <label>Password :
+        <input type="text" formControlName="password">
+    </label>
+    
+    <div formGroupName="adress">
+        <label>Street :
+            <input type="text"formControlName="street"> 
+        </label>
+        
+        <label>ZipCode :
+            <input type="number" formControlName="zipCode"> </label>
+        <label>City :
+            <input type="text"formControlName="city">
+        </label>
+
+    </div>
+    <button class="btn" type="submit">Envoyer</button>
+</form>
